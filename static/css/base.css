@@ -3,11 +3,11 @@ html {
 }
 
 body {
-    background-image: url('/media/group-of-people-taking-picture-1703579 (1).jpg') no-repeat center center fixed;
+    background: url('/media/homeimage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #03989e;
-    font-family: 'Abril Fatface', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* from Bulma */
