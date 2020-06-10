@@ -3,9 +3,12 @@ html {
 }
 
 body {
-    background: url('/media/homeimage.jpg') no-repeat center center fixed;
+    background: url('/media/homepageImage.png');
     background-size: cover;
-    height: calc(100vh - 164px);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0% 10%;
+    height: calc(100vh - 160px);
     color: #03989e;
     font-family: 'Open Sans', sans-serif;
 }
@@ -16,6 +19,7 @@ body {
     align-items: center;
     display: inline-flex;
     justify-content: center;
+    color: #03989e;
     height: 1.5rem;
     width: 1.5rem;
 }
