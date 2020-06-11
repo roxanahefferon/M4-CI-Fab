@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 0% 10%;
+    background-position: 0% 5%;
     height: calc(100vh - 160px);
     color: #03989e;
     font-family: 'Open Sans', sans-serif;
