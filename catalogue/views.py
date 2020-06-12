@@ -12,4 +12,4 @@ def all_catalogue(request):
         'products': products,
     }
 
-    return render(request, 'catalogue/products.html', context)
+    return render(request, 'catalogue/catalogue.html', context)
