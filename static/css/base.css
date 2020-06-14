@@ -103,10 +103,12 @@ input[name='q']::placeholder {
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
-
+    
+    /*
     .nav-link {
         padding: 0.15rem;
     }
+    */
 
     .nav-link i.fa-sm {
         font-size: 1rem;

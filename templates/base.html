@@ -40,7 +40,7 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'home' %}" class="navbar navbar-brand"> <img src="{% static 'images/fabLogo2.jpg' %}" width="80" height="80"></a>
+            <a href="{% url 'home' %}" class="navbar navbar-brand"> <img src="{% static 'images/fabLogo.jpg' %}" width="80" height="80"></a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'catalogue' %}">
@@ -79,7 +79,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'basket' %}">
+                        <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link" href="{% url 'basket' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-sm"></i></div>
                                 <p class="my-0">
