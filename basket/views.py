@@ -6,6 +6,7 @@ def basket(request):
 
     return render(request, 'basket/basket.html')
 
+
 def add_to_basket(request, item_id):
     """ View to add a quantity of a specified product to the basket """
 
@@ -19,5 +20,4 @@ def add_to_basket(request, item_id):
         basket[item_id] = quantity
 
     request.session['basket'] = basket
-    print(request.session['basket'])
     return redirect(redirect_url)
