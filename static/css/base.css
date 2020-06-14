@@ -62,6 +62,17 @@ input[name='q']::placeholder {
     right: 10px;
 }
 
+.overlay-effect {
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+    background-repeat: no-repeat;
+	background: url('/media/overlay_basket.jpg');
+	z-index: -1000;
+}
+
 
 /* media queries */
 
