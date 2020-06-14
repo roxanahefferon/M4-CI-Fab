@@ -5,8 +5,10 @@ from .models import Product, Category
 
 # Create your views here.
 
+
 def all_catalogue(request):
-    """ View to show all products in catalogue, including sorting and search queries """
+    """ View to show all products in catalogue,
+        including sorting and search queries """
 
     products = Product.objects.all()
     sort = None
@@ -21,7 +23,7 @@ def all_catalogue(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
+            products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
@@ -40,7 +42,7 @@ def all_catalogue(request):
             if not query:
                 messages.error(request, "Please enter a search criteria!")
                 return redirect(reverse('catalogue'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
