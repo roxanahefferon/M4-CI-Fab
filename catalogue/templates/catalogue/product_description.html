@@ -48,6 +48,19 @@
                     <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                        {% with product.has_sizes as stock %}
+                            {% if stock %}
+                                <div class="col-12">
+                                    <p><strong>UK Size:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                        <option value="s8">8</option>
+                                        <option value="s10">10</option>
+                                        <option value="s12" selected>12</option>
+                                        <option value="s14">14</option>
+                                        <option value="s16">16</option>
+                                    </select>
+                                </div>
+                            {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -57,7 +70,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col{% if stock %}-12 mt-2{% endif %}">
                                 <a href="{% url 'catalogue' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -67,6 +80,7 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
