@@ -62,7 +62,7 @@ input[name='q']::placeholder {
     right: 10px;
 }
 
-.overlay-effect {
+.overlay_basket {
     height: 100%;
 	width: 100%;
 	top: 0;
@@ -103,7 +103,7 @@ input[name='q']::placeholder {
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
-    
+
     /*
     .nav-link {
         padding: 0.15rem;
