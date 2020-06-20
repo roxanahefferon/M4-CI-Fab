@@ -35,8 +35,8 @@ def add_to_basket(request, item_id):
     return redirect(redirect_url)
 
 
-    def update_basket(request, item_id):
-        """ View to update the quantity of a specified product """
+def update_basket(request, item_id):
+    """ View to update the quantity of a specified product """
 
     quantity = int(request.POST.get('quantity'))
     size = None
@@ -47,28 +47,13 @@ def add_to_basket(request, item_id):
     if size:
         if quantity > 0:
             basket[item_id]['items_by_size'][size] = quantity
-            messages.success(request,
-                             (f'Updated size {size.upper()} '
-                              f'{product.name} quantity to '
-                              f'{basket[item_id]["items_by_size"][size]}'))
         else:
             del basket[item_id]['items_by_size'][size]
-            if not basket[item_id]['items_by_size']:
-                basket.pop(item_id)
-            messages.success(request,
-                             (f'Removed size {size.upper()} '
-                              f'{product.name} from your shopping basket'))
     else:
         if quantity > 0:
             basket[item_id] = quantity
-            messages.success(request,
-                             (f'Updated {product.name} '
-                              f'quantity to {basket[item_id]}'))
         else:
             basket.pop(item_id)
-            messages.success(request,
-                             (f'Removed {product.name} '
-                              f'from your shopping basket'))
 
     request.session['basket'] = basket
     return redirect(reverse('basket'))
