@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
 def basket(request):
@@ -57,3 +57,22 @@ def update_basket(request, item_id):
 
     request.session['basket'] = basket
     return redirect(reverse('basket'))
+
+
+def delete_basket(request, item_id):
+    """ View to delete a specified product from shopping basket """
+
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size'] 
+    basket = request.session.get('basket', {})
+
+    if size:
+        del basket[item_id]['items_by_size'][size]
+        if not basket [item_id]['items_by_size']:
+            basket.pop(item_id)
+    else:
+        basket.pop(item_id)
+
+    request.session['basket'] = basket
+    return HttpResponse(status=200)
