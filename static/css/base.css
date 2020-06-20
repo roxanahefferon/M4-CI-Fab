@@ -50,7 +50,7 @@ input[name='q']::placeholder {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #000;
+	background: #222;
 	z-index: -1;
 }
 
