@@ -49,6 +49,8 @@ def update_basket(request, item_id):
             basket[item_id]['items_by_size'][size] = quantity
         else:
             del basket[item_id]['items_by_size'][size]
+            if not basket[item_id]['items_by_size']:
+                basket.pop(item_id)
     else:
         if quantity > 0:
             basket[item_id] = quantity
@@ -62,17 +64,21 @@ def update_basket(request, item_id):
 def delete_basket(request, item_id):
     """ View to delete a specified product from shopping basket """
 
-    size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size'] 
-    basket = request.session.get('basket', {})
+    try:
+        size = None
+        if 'product_size' in request.POST:
+            size = request.POST['product_size'] 
+        basket = request.session.get('basket', {})
 
-    if size:
-        del basket[item_id]['items_by_size'][size]
-        if not basket [item_id]['items_by_size']:
+        if size:
+            del basket[item_id]['items_by_size'][size]
+            if not basket[item_id]['items_by_size']:
+                basket.pop(item_id)
+        else:
             basket.pop(item_id)
-    else:
-        basket.pop(item_id)
 
-    request.session['basket'] = basket
-    return HttpResponse(status=200)
+        request.session['basket'] = basket
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
