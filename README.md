@@ -89,5 +89,19 @@ It was optimized for print, web, and mobile interfaces, and has excellent legibi
 <li>Photo by Alexandra Maria from Pexels <a href="https://www.pexels.com/photo/close-up-of-shoes-and-bag-336372/" target="_blank">here</a>. Catalogue:336372.jpg</li>
 <li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1584096006933-8ab08c9aa725?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=760&q=80" target="_blank">here</a>. Catalogue:1584096006933.jpg</li>
 <li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1590156352256-39e4c6eba54e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" target="_blank">here</a>. Catalogue:1590156352256.jpg</li>
+<li>Photo by Scott Webb from Pexels <a href="https://images.pexels.com/photos/66354/pexels-photo-66354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" target="_blank">here</a>. Catalogue:66354.jpg</li>
+<li>Photo by Jess @ Harper Sunday on Unsplash <a href="https://images.unsplash.com/photo-1588056421330-045073ab19b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" target="_blank">here</a>. Catalogue:1588056421330.jpg</li>
+<li>Photo by Sabrinna Ringquist on Unsplash <a href="https://images.unsplash.com/photo-1586104237516-5b7075e00d45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" target="_blank">here</a>. Catalogue:1586104237516.jpg</li>
+<li>Photo by Sabrinna Ringquist on Unsplash <a href="https://images.unsplash.com/photo-1588445046108-14dced0c98fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" target="_blank">here</a>. Catalogue:1588445046108.jpg</li>
+<li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1588680388198-857d55222183?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" target="_blank">here</a>. Catalogue:1588680388198.jpg</li>
+<li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1588159343745-445ae0b16383?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80" target="_blank">here</a>. Catalogue:1588159343745.jpg</li>
+<li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1587467495807-da8e70e35344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" target="_blank">here</a>. Catalogue:1587467495807.jpg</li>
+<li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1587017539504-67cfbddac569?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80" target="_blank">here</a>. Catalogue:1587017539504.jpg</li>
+<li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1582121600983-d7ce72daf0a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80" target="_blank">here</a>. Catalogue:1582121600983.jpg</li>
+<li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1590739209058-1a3661361a6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=692&q=80" target="_blank">here</a>. Catalogue:1590739209058.jpg</li>
+
+
 <li><a href="https://www.freeiconspng.com/img/23489" target="_blank">'No image available' photo</a> Author: Ahkâm</li>
 </ul>
+<h3>Disclaimer</h3>
+The contents of this website are for educational purposes only.
