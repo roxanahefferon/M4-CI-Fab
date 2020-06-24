@@ -35,8 +35,8 @@ The wireframes that give the starting point for the website can be found here <>
 <li>CSS3</li>
 <li>Bootstrap</li>
 <li>Font Awesome</li>
-<li>Python 3.7</li>
-<li>Django 3</li>
+<li>Python 3.8.2</li>
+<li>Django 3.0.7</li>
 <li>Javascript (jQuery)</li>
 <li>Stripe</li>
 <li>AWS S3</li>
