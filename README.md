@@ -103,5 +103,20 @@ It was optimized for print, web, and mobile interfaces, and has excellent legibi
 
 <li><a href="https://www.freeiconspng.com/img/23489" target="_blank">'No image available' photo</a> Author: Ahkâm</li>
 </ul>
+
+<h3>Credits</h3>
+<ul>
+<li>The product descriptions used to create my datasets were taken from <a href="https://www.jjshouse.com/" target="_blank"> JJ's House Website</a> and <a href="https://www.littlewoodsireland.ie/" target="_blank">Littlewoods Ireland.</a></li>
+<li>The logo was created in <a href="https://www.canva.com/" target="blank">Canva.</a></li>
+<li>The favicon was created with the <a href="https://www.favicon-generator.org/" target="_blank">Favicon & App Icon Generator.</a></li>
+<li>All the images were compressed in <a href="https://tinyjpg.com/" target="_blank">TinyJPG.</a></li>
+<li>I used <a href="https://jsonformatter.org/" target="_blank">{JSON formatter}</a>to validate my datasets.</li>
+</ul>
+<h3>Acknowledgements</h3>
+<ul>
+<li>The Code Institute Slack community, where I have found many answers to many questions and learned a huge amount by reading through the posts.</li>
+<li>W3SCHOOLS.</li>
+<li>Stack Overflow.</li>
+</ul>
 <h3>Disclaimer</h3>
 The contents of this website are for educational purposes only.
