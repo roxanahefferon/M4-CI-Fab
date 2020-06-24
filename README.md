@@ -79,15 +79,15 @@ It was optimized for print, web, and mobile interfaces, and has excellent legibi
 <h3>Media</h3>
 <ul>
 <li>HomePage Image by <a href="https://pixabay.com/users/nastya_gepp-3773230/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3075752" target="_blank">Anastasia Gepp</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3075752" target="_blank">Pixabay</a></li>
-<li>Photo by Khaled Ghareeb on Unsplash<a href="https://unsplash.com/photos/-NyPn9up_7o" target="_blank">here</a>. Catalogue:1568252542512.jpg</li>
-<li>Photo by Khaled Ghareeb on Unsplash<a href="https://unsplash.com/photos/OjMiS43gEPo" target="_blank">here</a>. Catalogue:1568251723346.jpg</li>
-<li>Photo by Anna Logacheva on Unsplash<a href="https://unsplash.com/photos/d00FZ5Yfhxc" target="_blank">here</a>. Catalogue:1559034750.jpg</li>
-<li>Photo by Anna Logacheva on Unsplash<a href="https://www.pexels.com/photo/high-heels-shoes-luxury-rich-2669/" target="_blank">here</a>. Catalogue:2669.jpg</li>
+<li>Photo by Khaled Ghareeb on Unsplash <a href="https://unsplash.com/photos/-NyPn9up_7o" target="_blank">here</a>. Catalogue:1568252542512.jpg</li>
+<li>Photo by Khaled Ghareeb on Unsplash <a href="https://unsplash.com/photos/OjMiS43gEPo" target="_blank">here</a>. Catalogue:1568251723346.jpg</li>
+<li>Photo by Anna Logacheva on Unsplash <a href="https://unsplash.com/photos/d00FZ5Yfhxc" target="_blank">here</a>. Catalogue:1559034750.jpg</li>
+<li>Photo by Anna Logacheva on Unsplash <a href="https://www.pexels.com/photo/high-heels-shoes-luxury-rich-2669/" target="_blank">here</a>. Catalogue:2669.jpg</li>
 <li>Photo by Bella Zhong from Pexels <a href="https://www.pexels.com/photo/green-and-brown-peep-toe-heeled-sandals-3782786/" target="_blank">here</a>. Catalogue:3782786.jpg</li>
 <li>Photo by flat hito from Pexels <a href="https://www.pexels.com/photo/white-and-blue-floral-flap-sling-bag-hanging-on-white-steel-rack-904350/" target="_blank">here</a>. Catalogue:904350.jpg</li>
 <li>Photo by Caroline Attwood on Unsplash <a href="https://unsplash.com/photos/E1rH__X9SA0" target="_blank">here</a>. Catalogue:1586495777744.jpg</li>
 <li>Photo by Alexandra Maria from Pexels <a href="https://www.pexels.com/photo/close-up-of-shoes-and-bag-336372/" target="_blank">here</a>. Catalogue:336372.jpg</li>
 <li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1584096006933-8ab08c9aa725?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=760&q=80" target="_blank">here</a>. Catalogue:1584096006933.jpg</li>
 <li>Photo by Laura Chouette on Unsplash <a href="https://images.unsplash.com/photo-1590156352256-39e4c6eba54e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" target="_blank">here</a>. Catalogue:1590156352256.jpg</li>
-<li><a href="https://www.freeiconspng.com/img/23489" target="_blank">No Icon Photos</a>Author: Ahkâm</li>
+<li><a href="https://www.freeiconspng.com/img/23489" target="_blank">'No image available' photo</a> Author: Ahkâm</li>
 </ul>
