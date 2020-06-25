@@ -110,7 +110,7 @@ It was optimized for print, web, and mobile interfaces, and has excellent legibi
 <li>The logo was created in <a href="https://www.canva.com/" target="blank">Canva.</a></li>
 <li>The favicon was created with the <a href="https://www.favicon-generator.org/" target="_blank">Favicon & App Icon Generator.</a></li>
 <li>All the images were compressed in <a href="https://tinyjpg.com/" target="_blank">TinyJPG.</a></li>
-<li>I used <a href="https://jsonformatter.org/" target="_blank">{JSON formatter}</a>to validate my datasets.</li>
+<li>I used <a href="https://jsonformatter.org/" target="_blank">{JSON formatter}</a> to validate my datasets.</li>
 </ul>
 <h3>Resources used</h3>
 <ul>
