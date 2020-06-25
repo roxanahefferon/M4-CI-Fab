@@ -30,7 +30,7 @@ input[name='q']::placeholder {
 
 .home-message {
     margin-top: 75px;
-    color: #fff;
+    color: #222;
     background-color: #806543;
     border-radius: 0.25rem;
     opacity: 0.50;
