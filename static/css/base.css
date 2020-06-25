@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
     background-position: 0% 5%;
     height: calc(100vh - 160px);
-    color: #03989e;
+    color: #111111;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -19,18 +19,26 @@ body {
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    color: #03989e;
+    color: #33266e;
     height: 1.5rem;
     width: 1.5rem;
 }
 
 input[name='q']::placeholder {
-    color: #03989e;
+    color: #33266e;
+}
+
+.home-message {
+    margin-top: 75px;
+    background-color: #806543;
+    padding: 5px;
+    opacity: 0.75;
+    color: #fafafa;
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: #111111;
+    color: #806543;
     min-width: 260px;
 }
 
@@ -40,8 +48,8 @@ input[name='q']::placeholder {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #542f34;
+    color: #806543;
 }
 
 .overlay {
@@ -70,7 +78,7 @@ input[name='q']::placeholder {
 	position: fixed;
     background-repeat: no-repeat;
 	background: url('/media/overlay_basket.jpg');
-	z-index: -1000;
+	z-index: -1;
 }
 
 /* toast component from bootstrap */
