@@ -112,10 +112,15 @@ It was optimized for print, web, and mobile interfaces, and has excellent legibi
 <li>All the images were compressed in <a href="https://tinyjpg.com/" target="_blank">TinyJPG.</a></li>
 <li>I used <a href="https://jsonformatter.org/" target="_blank">{JSON formatter}</a>to validate my datasets.</li>
 </ul>
+<h3>Resources used</h3>
+<ul>
+<li>For more on Bootstrap <a href="https://www.w3schools.com/bootstrap4/bootstrap_ref_js_toasts.asp">toasts.</a></li>
+<li>For CSS <a href="https://css-tricks.com/snippets/css/css-triangle/">triangle.</a></li>
+</ul>
 <h3>Acknowledgements</h3>
 <ul>
 <li>The Code Institute Slack community, where I have found many answers to many questions and learned a huge amount by reading through the posts.</li>
-<li>W3SCHOOLS.</li>
+<li>w3schools.</li>
 <li>Stack Overflow.</li>
 </ul>
 <h3>Disclaimer</h3>
