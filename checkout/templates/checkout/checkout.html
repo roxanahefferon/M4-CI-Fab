@@ -31,13 +31,22 @@
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
-                    <legend>Customer Details</legend>
+                    <legend class="fieldset-label">Customer Details</legend>
+                    {{ order_form.first_name | as_crispy_field }}
+                    {{ order_form.last_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                    <legend>Delivery Information</legend>
+                    <legend class="fieldset-label">Delivery Information</legend>
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.town | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                    <legend>Payment Details</legend>
+                    <legend class="fieldset-label">Payment Details</legend>
                     </fieldset>
 		</div>
 	</div>
