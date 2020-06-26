@@ -41,11 +41,11 @@
                 <div class="col-2 mb-1">
                     <a href="{% url 'product_description' item.product.id %}">
                         {% if item.product.image %}
-                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                                    {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noImage.png" alt="{{ product.name }}">
-                                    {% endif %}
-                                </a>
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noImage.png" alt="{{ product.name }}">
+                        {% endif %}
+                    </a>
                 </div>
                 <div class="col-7">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -73,7 +73,7 @@
             </div>
         </div>
 
-	<div class="row">
+
 		<div class="col-12 col-lg-6">
 			<p class="text-muted">Fill out the form to proceed with your order.</p>
             <form action="{% url 'checkout' %}" method="POST" id="card-payment-form">
