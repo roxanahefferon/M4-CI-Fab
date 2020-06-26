@@ -76,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # this is required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'basket.contexts.basket_contents',
             ],
             'builtins': [
