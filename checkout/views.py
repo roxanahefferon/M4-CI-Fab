@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
 from .forms import OrderForm
+from basket.contexts import basket_contents
+
+import stripe
 
 # Create your views here.
 
@@ -12,6 +15,9 @@ def checkout(request):
         messages.error(request, "There are no items in your basket at the moment")
         return redirect(reverse('catalogue'))
 
+    current_basket = basket_contents(request)
+    total = current_basket['grand_total']
+    stripe_total = round(total * 100)
     order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
