@@ -38,6 +38,10 @@ input[name='q']::placeholder {
     font-family: 'Abril Fatface', sans-serif;
 }
 
+.fas {
+    color: #806543;
+}
+
 .my-button {
     background: #33266e;
     color: #806543;

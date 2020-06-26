@@ -44,10 +44,45 @@
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.town | as_crispy_field }}
                     {{ order_form.county | as_crispy_field }}
+					<div class="form-check form-check-inline float-right mr-0">
+						{% if user.is_authenticated %}
+						<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+						<input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+												{% else %}
+						<label class="form-check-label" for="id-save-info">
+					                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+					                                    <a class="text-info" href="{% url 'account_login' %}">Login</a> to save this information
+					                                </label>
+						{% endif %}
+					</div>
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label">Payment Details</legend>
+                    <div class="mb-3" id="card-info"></div>
+                    <div class="mb-3" id="card-issue" role="alert"></div>
                     </fieldset>
+
+                    <div class="submit-button text-right mt-5 mb-2">                    
+						<a href="{% url 'basket' %}" class="btn my-button">
+							<span class="icon">
+								<i class="fas fa-chevron-left"></i>
+							</span>
+							<span class="font-weight-bold">Update Basket</span>
+						</a>
+						<button id="submit-button" class="btn my-button">
+							<span class="font-weight-bold">Complete Order</span>
+							<span class="icon">
+								<i class="fas fa-lock"></i>
+							</span>
+						</button>
+						<p class="small my-0">
+							<span class="icon">
+								<i class="fas fa-exclamation-circle"></i>
+							</span>
+							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+						</p>
+					</div>
+                    </form>
 		</div>
 	</div>
 	</div>
