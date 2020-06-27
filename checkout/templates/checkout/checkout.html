@@ -76,7 +76,7 @@
 
 		<div class="col-12 col-lg-6">
 			<p class="text-muted">Fill out the form to proceed with your order.</p>
-            <form action="{% url 'checkout' %}" method="POST" id="card-payment-form">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label w-auto">Customer Details</legend>
