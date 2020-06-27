@@ -41,3 +41,9 @@
 .stripe-style-input::placeholder {
     color: #a6607c;
 }
+
+.my-border {
+    border: 2px solid #a6607c;
+    padding: 20px;
+    border-radius: 0.25rem; 
+}
