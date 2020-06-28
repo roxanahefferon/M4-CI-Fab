@@ -16,16 +16,17 @@ class OrderAdmin(admin.ModelAdmin):
                        'delivery_cost', 'order_total',
                        'grand_total',)
 
-    fields = ('order_number', 'date', 'first_name', 
-              'last_name', 'email', 'phone_number',               
-              'street_address_1', 'street_address_2', 'postcode', 
+    fields = ('order_number', 'date', 'user_profile', 'first_name',
+              'last_name', 'email', 'phone_number',
+              'street_address_1', 'street_address_2', 'postcode',
               'town', 'county', 'delivery_cost',
               'order_total', 'grand_total',)
 
     list_display = ('order_number', 'date', 'first_name',
-                    'last_name', 'order_total', 
+                    'last_name', 'order_total',
                     'delivery_cost', 'grand_total',)
 
     ordering = ('-date',)
+
 
 admin.site.register(Order, OrderAdmin)

@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
+                <h2 class="heading-font">Products</h2>
                 {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'catalogue' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -53,7 +53,7 @@
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
+                            <div class="card h-100 my-border">
                                 {% if product.image %}
                                 <a href="{% url 'product_description' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -66,19 +66,19 @@
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
-                                <div class="card-footer pt-0 border-0 text-left">
+                                <div class="card-footer pt-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                            <p class="lead mb-0 text-left">€{{ product.price }}</p>
                                             
                                             {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                <small class="text-muted text-right"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
-                                                <small class="text-muted">No Rating</small>
+                                                <small class="text-muted text-right">No Rating</small>
                                             {% endif %}
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'catalogue' %}?category={{ product.category.name }}">
+                                                <a class="text-muted text-left" href="{% url 'catalogue' %}?category={{ product.category.name }}">
                                                     <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                                 </a>
                                             </p>

@@ -3,14 +3,22 @@ html {
 }
 
 body {
-    background: url('/media/homepageImage.png');
+    background: url('/media/homepageImage.png') no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 0% 5%;
-    height: calc(100vh - 160px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: 0% -40%;
+    height: calc(100vh - 200px);
     color: #33266e;
     font-family: 'Open Sans', sans-serif;
+}
+
+#topnav {
+    background-color: #222;
+}
+.logo {
+    border-radius: 0.25rem;
 }
 
 /* from Bulma */
@@ -33,11 +41,11 @@ input[name='q']::placeholder {
 }
 
 .home-message {
-    margin-top: 75px;
-    color: #222;
+    margin-top: 175px;
+    color: #000;
     background-color: #806543;
     border-radius: 0.25rem;
-    opacity: 0.50;
+    opacity: 0.75;
     padding: 20px;
     font-family: 'Abril Fatface', sans-serif;
 }
@@ -53,11 +61,30 @@ input[name='q']::placeholder {
     border-radius: .25rem;
 }
 
+.my-border {
+    border-style: solid;
+    border-color: #806543;
+    border-radius: 0.25rem;
+}
+
+.shop-button {
+    float: left;
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff;
+}
+
 .my-button:hover,
 .my-button:active,
 .my-button:focus {
     background: #542f34;
     color: #806543;
+    font-weight: bold;
+}
+
+.card-footer,
+.card-body {
+    background-color: #222;
 }
 
 .overlay {
@@ -85,7 +112,7 @@ input[name='q']::placeholder {
 	left: 0;
 	position: fixed;
     background-repeat: no-repeat;
-	background: url('/media/overlay_basket.jpg');
+	background-color: #fafafa;
 	z-index: -1;
 }
 
