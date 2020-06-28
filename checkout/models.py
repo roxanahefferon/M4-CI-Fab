@@ -5,6 +5,7 @@ from django.db.models import Sum
 from django.conf import settings
 
 from catalogue.models import Product
+from profiles.models import UserProfile
 
 # Create your models here.
 
@@ -12,6 +13,9 @@ from catalogue.models import Product
 class Order(models.Model):
     order_number = models.CharField(max_length=32,
                                     null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True,
+                                     related_name='orders')
     date = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=30,
                                   null=False, blank=False)
@@ -69,11 +73,16 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, null=False, blank=False,
+                              on_delete=models.CASCADE,
+                              related_name='lineitems')
+    product = models.ForeignKey(Product, null=False, blank=False,
+                                on_delete=models.CASCADE)
     product_size = models.CharField(max_length=2, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, blank=False,
+                                         editable=False)
 
     def save(self, *args, **kwargs):
         """
