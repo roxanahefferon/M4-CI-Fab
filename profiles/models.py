@@ -25,9 +25,8 @@ class UserProfile(models.Model):
     default_county = models.CharField(max_length=80,
                                       null=True, blank=True)
 
-
-def __str__(self):
-    return self.user.username
+    def __str__(self):
+        return self.user.username
 
 
 @receiver(post_save, sender=User)

@@ -28,6 +28,10 @@ input[name='q']::placeholder {
     color: #33266e;
 }
 
+.heading-font {
+    font-family: 'Abril Fatface', sans-serif;
+}
+
 .home-message {
     margin-top: 75px;
     color: #222;
