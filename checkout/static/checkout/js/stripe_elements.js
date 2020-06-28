@@ -27,6 +27,7 @@ var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
 // validation errors on the card element
+
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
@@ -43,42 +44,56 @@ card.addEventListener('change', function (event) {
 });
 
 // form submit from stripe documentation
+
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
-    card.update({ 'disabled': true});
+    card.update({'disabled': true});
     $('#submit-button').attr('disabled', true);
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-            billing_details: {
-                first: $.trim(form.first_name.value),
-                last: $.trim(form.last_name.value),
+
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    // From using {% csrf_token %} in the form
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    var postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+        'save_info': saveInfo,
+    };
+
+    var url = '/checkout/cache_checkout_data/';
+
+    $.post(url, postData).done(function() {
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                    billing_details: {
+                    name: $.trim(form.first_name.value),
+                    name: $.trim(form.last_name.value),
+                    phone: $.trim(form.phone_number.value),
+                    email: $.trim(form.email.value),
+                    address: {
+                        line1: $.trim(form.street_address_1.value),
+                        line2: $.trim(form.street_address_2.value),
+                        postal_code: $.trim(form.postcode.value),
+                        city: $.trim(form.town.value),
+                        state: $.trim(form.county.value),
+
+                    }
+                }
+            },
+            shipping: {
+                name: $.trim(form.first_name.value),
+                name: $.trim(form.last_name.value),
                 phone: $.trim(form.phone_number.value),
-                email: $.trim(form.email.value),
                 address: {
                     line1: $.trim(form.street_address_1.value),
                     line2: $.trim(form.street_address_2.value),
-                    postcode: $.trim(form.postcode.value),
-                    town: $.trim(form.town.value),
-                    county: $.trim(form.county.value),
-
-                }
-            }
-        },
-        shipping: {
-            first: $.trim(form.first_name.value),
-            last: $.trim(form.last_name.value),
-            phone: $.trim(form.phone_number.value),
-            address: {
-                line1: $.trim(form.street_address_1.value),
-                line2: $.trim(form.street_address_2.value),
-                postcode: $.trim(form.postcode.value),
-                town: $.trim(form.town.value),
-                county: $.trim(form.county.value),
-            }
-        },
+                    postal_code: $.trim(form.postcode.value),
+                    city: $.trim(form.town.value),
+                    state: $.trim(form.county.value),
+                }   
+            },
     }).then(function(result) {
         if (result.error) {
         // shows error message to customer
@@ -90,7 +105,7 @@ form.addEventListener('submit', function(ev) {
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
             // re enable to fix card error
-            card.update({ 'disabled': false});
+            card.update({'disabled': false});
             $('#submit-button').attr('disabled', false);
         } else {
         // shows payment success message 
@@ -99,4 +114,8 @@ form.addEventListener('submit', function(ev) {
             }
         }
     });
+}).fail(function () {
+        // reloads the page - the error will be in django messages
+        location.reload();
+    })
 });
