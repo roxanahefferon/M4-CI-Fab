@@ -1,0 +1,1 @@
+web: gunicorn fab_by_tiny.wsgi:application
