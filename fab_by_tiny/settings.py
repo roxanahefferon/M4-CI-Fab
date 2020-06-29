@@ -26,7 +26,7 @@ SECRET_KEY = 'biv+!$wsmsoy#eh1aqgv9epwx9agkh1fmus76(%1%w0a!pk9$2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fab-by-tiny.herokuapp.com', 'localhost']
 
 
 # Application definition
