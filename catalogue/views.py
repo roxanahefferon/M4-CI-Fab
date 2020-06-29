@@ -77,9 +77,9 @@ def create_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'New product created successfully')
-            return redirect(reverse('create_product'))
+            return redirect(reverse('product_description', args=[product.id]))
         else:
             messages.error(request, 'Failed to create new product')
     else:
@@ -115,3 +115,12 @@ def update_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ Deletes an existing product """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, f'Product {product.name} has been deleted')
+
+    return redirect(reverse('catalogue'))
