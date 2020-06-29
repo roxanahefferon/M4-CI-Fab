@@ -72,10 +72,20 @@ def product_description(request, product_id):
     return render(request, 'catalogue/product_description.html', context)
 
 
-def product_create(request):
-    """ Adds a product """
-    form = ProductForm()
-    template = 'products/product_create.html'
+def create_product(request):
+    """ Creates a new product """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'New product created successfully')
+            return redirect(reverse('create_product'))
+        else:
+            messages.error(request, 'Failed to create new product')
+    else:
+        form = ProductForm()
+
+    template = 'catalogue/create_product.html'
     context = {
         'form': form,
     }
