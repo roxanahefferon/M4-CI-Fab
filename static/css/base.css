@@ -93,17 +93,17 @@ input[name='q']::placeholder {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #222;
+	background: #fafafa;
 	z-index: -1;
 }
-
+/*
 .btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
     bottom: 10px;
     right: 10px;
-}
+}*/
 
 .overlay_basket {
     height: 100%;
