@@ -51,8 +51,10 @@ input[name='q']::placeholder {
 .navbar-nav .dropdown-menu {
     background-color: #542f34;
 }
-.dropdown-item > a {
+
+a.dropdown-item {
     color: #fafafa;
+    font-size: 14px;
 }
 
 #topnav {
