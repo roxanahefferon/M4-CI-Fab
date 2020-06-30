@@ -14,12 +14,23 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#topnav,
-#mobile-search {
+#topnav {
     background-color: #222;
 }
 .logo {
     border-radius: 0.25rem;
+}
+
+.dropdown-menu {
+    background-color: #542f34;
+}
+
+.dropdown-item {
+    color: #fafafa;
+}
+
+.navbar-nav {
+    background-color: #222;
 }
 
 /* from Bulma */
@@ -85,7 +96,7 @@ input[name='q']::placeholder {
 
 .card-footer,
 .card-body {
-    background-color: #222;
+    background-color: #fafafa;
 }
 
 .overlay {
@@ -94,19 +105,11 @@ input[name='q']::placeholder {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #fafafa;
+	background: #222;
 	z-index: -1;
 }
-/*
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}*/
 
-.overlay_basket {
+.overlay-basket {
     height: 100%;
 	width: 100%;
 	top: 0;
@@ -132,9 +135,10 @@ input[name='q']::placeholder {
 }
 
 .toast-capper {
-    height: 40px;
+    height: 20px;
 }
 
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -144,6 +148,22 @@ input[name='q']::placeholder {
     position: absolute;
     top: -10px;
     right: 36px;
+}
+
+.arrow-success {
+    border-bottom-color: #806543 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #33266e !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #542f34 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #a6607c !important;
 }
 
 .basket-view-wrapper {
@@ -177,6 +197,8 @@ input[name='q']::placeholder {
     background-color: #542f34;
     border-color: #542f34;
 }
+
+
 
 /* media queries */
 
