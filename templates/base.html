@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images\favicon-16x16.png' %}">
   </head>
   <body>
-    <header class="container-fluid fixed-top" style="background-color: #222";>
+    <header class="container-fluid fixed-top" style="background-color: #222;">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-0 py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="navbar navbar-brand"> <img src="{% static 'images/logoFabFinal.png' %}" width="100" height="100" class="logo" alt="Fab Logo"></a>
@@ -81,7 +81,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link" href="{% url 'basket' %}">
+                        <a class="nav-link" href="{% url 'basket' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-sm"></i></div>
                                 <p class="my-0 icon">

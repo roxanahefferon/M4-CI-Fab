@@ -21,6 +21,11 @@ body {
 
 .nav-link {
     text-decoration: none;
+    color: #806543;
+}
+
+.nav-link:hover {
+    text-decoration: none;
     color: #fafafa;
 }
 
@@ -89,6 +94,12 @@ input[name='q']::placeholder {
     color: #fafafa;
 }
 
+.shop-button:hover {
+    background-color: #a6607c;
+    opacity: 0.75;
+    color: #fafafa;
+}
+
 .my-button:hover,
 .my-button:active,
 .my-button:focus {
@@ -103,16 +114,6 @@ input[name='q']::placeholder {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: #222;
-	z-index: -1;
-}
-
-.overlay-basket {
     height: 100%;
 	width: 100%;
 	top: 0;
@@ -141,19 +142,19 @@ input[name='q']::placeholder {
     height: 20px;
 }
 
-.capper-success {
+.toast-capper.capper-success {
     background-color: #806543;
 }
 
-.caper-error {
+.toast-capper.caper-error {
     background-color: #33266e;
 }
 
-.capper-warning {
+.toast-capper.capper-warning {
     background-color: #542f34;
 }
 
-.capper-info {
+.toast-capper.capper-info {
     background-color: #a6607c;
 }
 
