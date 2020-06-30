@@ -1,6 +1,6 @@
 {% load static %}
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
     <!-- Required meta tags -->
     {% block meta %}
@@ -42,7 +42,7 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-0 py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'home' %}" class="navbar navbar-brand"> <img src="{% static 'images/logoFabFinal.png' %}" width="100" height="100" class="logo"></a>
+            <a href="{% url 'home' %}" class="navbar navbar-brand"> <img src="{% static 'images/logoFabFinal.png' %}" width="100" height="100" class="logo" alt="Fab Logo"></a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'catalogue' %}">

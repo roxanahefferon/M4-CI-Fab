@@ -72,8 +72,10 @@ class StripeWH_Handler:
                 profile.default_phone_number = shipping_details.phone
                 profile.default_postcode = shipping_details.postal_code
                 profile.default_town = shipping_details.address.city
-                profile.default_street_address_1 = shipping_details.address.line1
-                profile.default_street_address_2 = shipping_details.address.line2
+                profile.default_street_address_1 =\
+                    shipping_details.address.line1
+                profile.default_street_address_2 =\
+                    shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
@@ -103,7 +105,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | SUCCESS:\
+                    Verified order already in database',
                 status=200)
         else:
             order = None
@@ -144,11 +147,13 @@ class StripeWH_Handler:
                 if order:
                     order.delete()
                 return HttpResponse(
-                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    content=f'Webhook received: {event["type"]} | ERROR:\
+                        {e}',
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} | SUCCESS:\
+                Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):

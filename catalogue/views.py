@@ -46,7 +46,8 @@ def all_catalogue(request):
                 messages.error(request, "Please enter a search criteria!")
                 return redirect(reverse('catalogue'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -85,7 +86,8 @@ def create_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'New product created successfully')
-            return redirect(reverse('product_description', args=[product.id]))
+            return redirect(reverse('product_description',
+                                    args=[product.id]))
         else:
             messages.error(request, 'Failed to create new product')
     else:
@@ -112,7 +114,8 @@ def update_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Product updated successfully')
-            return redirect(reverse('product_description', args=[product.id]))
+            return redirect(reverse('product_description',
+                                    args=[product.id]))
         else:
             messages.error(request, 'Failed to update')
     else:

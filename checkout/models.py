@@ -13,9 +13,9 @@ from profiles.models import UserProfile
 class Order(models.Model):
     order_number = models.CharField(max_length=32,
                                     null=False, editable=False)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                     null=True, blank=True,
-                                     related_name='orders')
+    user_profile = models.ForeignKey(UserProfile,
+                                     on_delete=models.SET_NULL, null=True,
+                                     blank=True, related_name='orders')
     date = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=30,
                                   null=False, blank=False)
@@ -65,7 +65,8 @@ class Order(models.Model):
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+            self.delivery_cost = self.order_total * \
+                settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
@@ -93,4 +94,5 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.product.sku} on order {self.order.order_number}'
+        return f'SKU {self.product.sku} on order \
+            {self.order.order_number}'

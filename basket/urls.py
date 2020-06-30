@@ -7,3 +7,4 @@ urlpatterns = [
     path('update/<item_id>/', views.update_basket, name='update_basket'),
     path('delete/<item_id>/', views.delete_basket, name='delete_basket'),
 ]
+
