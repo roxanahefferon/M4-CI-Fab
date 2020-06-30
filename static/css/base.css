@@ -17,20 +17,19 @@ body {
 #topnav {
     background-color: #222;
 }
+
 .logo {
     border-radius: 0.25rem;
 }
 
-.dropdown-menu {
-    background-color: #542f34;
-}
-
-.dropdown-item {
-    color: #fafafa;
-}
-
-.navbar-nav {
+.navbar {
     background-color: #222;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #33266e;
+    border: 2px solid #806543;
+    border-radius: 0.25rem;
 }
 
 /* from Bulma */
@@ -138,32 +137,20 @@ input[name='q']::placeholder {
     height: 20px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
+.capper-success {
+    background-color: #806543;
 }
 
-.arrow-success {
-    border-bottom-color: #806543 !important;
+.caper-error {
+    background-color: #33266e;
 }
 
-.arrow-danger {
-    border-bottom-color: #33266e !important;
+.capper-warning {
+    background-color: #542f34;
 }
 
-.arrow-warning {
-    border-bottom-color: #542f34 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #a6607c !important;
+.capper-info {
+    background-color: #a6607c;
 }
 
 .basket-view-wrapper {
@@ -186,6 +173,12 @@ input[name='q']::placeholder {
     min-width: 100%;
     min-height: 100%;
     opacity: 0;
+    cursor: pointer;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 

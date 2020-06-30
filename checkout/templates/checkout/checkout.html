@@ -16,17 +16,16 @@
 
 {% block content %}
 	<div class="overlay"></div>
-	<div class="container">
+	<div class="container mt-5">
 		<div class="row">
 			<div class="col">
-				<hr>
-				<h2 class="logo-font mb-4">Checkout</h2>
+				<h2 class="heading-font mt-5">Checkout</h2>
 				<hr>
 			</div>
 		</div>
 
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
+        <div class="col-12 col-lg-6 order-lg-last mb-2">
             <p class="text-muted">Order Summary ({{ product_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
@@ -75,7 +74,7 @@
 
 
 		<div class="col-12 col-lg-6">
-			<p class="text-muted">Fill out the form to proceed with your order.</p>
+			<p class="text-muted">Fill out the form to proceed with your order:</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
@@ -104,20 +103,20 @@
 						{% endif %}
 					</div>
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="rounded px-3 mb-2">
                     <legend class="fieldset-label w-auto">Payment Details</legend>
                     <div class="mb-3" id="card-element"></div>
                     <div class="mb-3" id="card-errors" role="alert"></div>
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'basket' %}" class="btn my-button">
+						<a href="{% url 'basket' %}" class="btn my-button m-2">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Update Basket</span>
 						</a>
-						<button id="submit-button" class="btn my-button">
+						<button id="submit-button" class="btn my-button m-2">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
