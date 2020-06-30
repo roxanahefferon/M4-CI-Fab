@@ -49,11 +49,11 @@ input[name='q']::placeholder {
 }
 
 .navbar-nav .dropdown-menu {
-    background-color: #542f34;
+    background-color: #a6607c;
 }
 
 a.dropdown-item {
-    color: #806543;
+    color: #222;
     font-size: 14px;
 }
 
