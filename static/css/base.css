@@ -5,9 +5,6 @@ html {
 body {
     background: url('/media/homepageImage.png') no-repeat center center fixed;
     background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-position: 0% -40%;
     height: calc(100vh - 200px);
     color: #33266e;
@@ -19,9 +16,7 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #33266e;
-    border: 2px solid #806543;
-    border-radius: 0.25rem;
+    color: #a6607c;
 }
 
 .nav-link {
@@ -49,10 +44,14 @@ input[name='q']::placeholder {
 }
 
 .navbar-nav .dropdown-menu {
-    background-color: #806543;
+    background-color: #542f34;
 }
-.dropdown-item a {
+.dropdown-item > a {
     color: #fafafa;
+}
+
+#topnav {
+    background-color: #222;
 }
 
 .home-message {
@@ -80,8 +79,6 @@ input[name='q']::placeholder {
     border-color: #806543;
     border-radius: 0.25rem;
 }
-
-
 
 .shop-button {
     float: left;
@@ -202,8 +199,8 @@ input[name='q']::placeholder {
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #542f34;
     border-color: #542f34;
+    
 }
 
 /* media queries */
@@ -253,7 +250,8 @@ input[name='q']::placeholder {
         padding: 6px .6px;
     }
 
-    .increment-qty, .decrement-qty {
+    .increment-qty 
+    .decrement-qty {
         padding: 4px 8px !important;
     }
 }
