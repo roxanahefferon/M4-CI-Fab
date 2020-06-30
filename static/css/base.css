@@ -14,22 +14,19 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#topnav {
-    background-color: #222;
-}
-
 .logo {
     border-radius: 0.25rem;
-}
-
-.navbar {
-    background-color: #222;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: #33266e;
     border: 2px solid #806543;
     border-radius: 0.25rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fafafa;
 }
 
 /* from Bulma */
