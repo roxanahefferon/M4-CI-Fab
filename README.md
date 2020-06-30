@@ -1,9 +1,8 @@
 <h1>Milestone 4 – FAB, by Tiny - CI - Full Stack Frameworks with Django.</h1>
-Project Idea: Build an ecommerce website to sell/hire party dresses and accessories.
+Project Idea: Build an ecommerce website to sell party dresses and accessories.
 This project is focused on both front and back end development skills.
 I decided to go ahead with this idea based on a project that my sister has had for years.  
 Fab, by Tiny is a fictitious online party dress, shoes and accessories store. 
-The store has its own collection for sale but also gives the possibility to hire.
 <h2>UX</h2>
 This website is for people who are looking for designer dresses and accessories at an affordable price.
 <h3>User Stories</h3>
@@ -152,6 +151,31 @@ Deployment and source control was carried out via GitHub and Heroku.
 <li>"AWS_SECRET_KEY_ID": "your_aws_secret_key_id",</li> 
 <li>"AWS_SECRET_ACCESS_KEY": "your_aws_secret_access_key_id"</li>
 <p>Both <strong>AWS_ACCESS_KEY_ID</strong> and <strong>AWS_SECRET_ACCESS_KEY</strong> can be obtained from <a href="https://aws.amazon.com/">AWS Services</a>.</p>
+</ul>
+<h2>Testing</h2>
+The responsiveness of the website was checked mainly in Dev Tools.
+<h3>Manual Testing</h3>
+Manual testing was performed on the following made and model devices: iPhone11, iPhone X, iPad Pro, Motorola Moto G Play, Samsung J7 Prime, iPhone6
+<ul>
+<li>Click --> logo and verify being redirected to home page.</li>
+<li>Click --> home and verify being redirected to home page.</li>
+<li>Click --> login and verify being redirected to the sign in page.</li>
+<li>Click --> register and verify being redirected to the register page.</li>
+<li>Click --> product management and verify being redirected to the product management page.</li>
+<li>Click --> profile and verify being redirected to the profile and order history page.</li>
+<li>Click --> basket icon and verify being redirected to the basket page.</li>
+<li>Click --> checkout and verify being redirected to the checkout page.</li>
+<li>Log in with an unregistered username and password and verify that an error message appears.</li> 
+<li>Log in with a registered username but wrong password and verify an error message appears.</li>
+<li>Log in with a registered username and correct password and verify being redirected to the home page.</li> 
+<li>Close the page and open it again and verify the user is still logged in.</li> 
+<li>Log out and verify being redirect to the logout page.</li> 
+<li>Refresh the page and check if you are still logged out.</li>
+<li>Register with a username already being used and verify an error message is displayed.</li>
+<li>Register with an invalid email address and verify an error message is displayed.</li>
+<li>Fill in the form correctly and click --> checkout securely.</li>
+<li>Check all CRUD operations working properly under product management</li>
+***ongoing***
 </ul>
 <h2>Validation</h2>
 <h3>CSS</h3>
