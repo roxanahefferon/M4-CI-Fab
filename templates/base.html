@@ -67,7 +67,7 @@
                                 <p class="my-0 icon">Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" style="background-color: #806543;" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'create_product' %}" class="dropdown-item">Product Management</a>
